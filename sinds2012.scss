@@ -1,0 +1,402 @@
+@import "http://fonts.googleapis.com/css?family=Gentium+Basic:700";
+
+@mixin shadow( $off-y, $off-x, $blur, $color){
+	-moz-box-shadow: $off-y $off-x $blur $color;
+	-webkit-box-shadow:  $off-y $off-x $blur $color;
+	box-shadow:  $off-y $off-x $blur $color;
+}
+
+@mixin mq($size) {
+
+	@if $size == "max" {
+		@media screen and (min-width: 1280px) {
+			@content;
+		}
+	} @else if $size == "medium" {
+		@media screen and (max-width: 960px) {
+			@content;
+		}
+	} @else if $size == "small" {
+		@media screen and (max-width: 480px) {
+			@content;
+		}
+	}
+
+}
+
+$side-margin: 175px;
+$link-internal: #b40000;
+$link-external: #111777;
+$small-font-size: 12px;
+$break-max: 1280px;
+$break-medium: 960px;
+$break-small: 480px;
+
+body {
+	background: #fff url("_/img/bg-sinds82.png") repeat-x left top;
+	margin: 0;
+	padding: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+
+	@include mq("small") {
+		font-size: 0.8em;
+	}
+
+	@include mq("max") {
+		font-size: 1.2em;
+	}
+}
+
+a {
+	color: $link-external;
+}
+
+ul.internal-links li a {
+	color: $link-internal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+hr {
+	margin: 1.5em 0;
+}
+
+blockquote {
+	margin: 0;
+	border-left: 3px solid #ededed;
+	padding-left: 1.5em;
+	font-style: italic;
+}
+
+p.wp-caption-text {
+	font-style: italic;
+	font-size: $small-font-size !important;
+	font-weight: 300;
+	color: #888;
+}
+
+#page-wrap {
+
+	width: 960px;
+	padding-top: 30px;
+	margin: 0 auto;
+
+	@include mq("medium") {
+		width: auto;
+		max-width: 665px;
+	}
+
+	@include mq("small") {
+		width: auto;
+		margin: 0;
+	}
+
+	@media screen and (-webkit-min-device-pixel-ratio: 2) {
+		background: url("_/img/bg-sinds82.png") repeat-x left top;
+		background-color: #fff;
+		background-size: 1px 20px;
+		font-size: 1.2em;
+	}
+}
+
+#header {
+
+	font-weight: 300;
+	padding: 30px 20px 30px $side-margin;
+	margin-bottom: 1em;
+
+	@include mq("medium") {
+		padding: 0px 0px 10px 0;
+	}
+
+	h1 {
+		font-family: 'Gentium Basic', serif;
+		font-weight: 700;
+		margin: 0 0 0 ($side-margin*-1)+53;
+		width: 400px;
+		height: 100px;
+
+		@include mq("max") {
+			width: 600px;
+		};
+
+		@include mq("medium") {
+			margin: 0;
+			width: auto;
+			height: auto;
+		};
+
+		a {
+			color: #333;
+			text-decoration: none;
+			font-size: 1.6em;
+			display: block;
+			background: url("_/img/logo.png") no-repeat left top;
+			padding: 20px 0 20px 120px;
+
+			@media screen and (-webkit-min-device-pixel-ratio: 2){
+				background: url("_/img/logo_2x.png") no-repeat 0px 21px;
+				background-size: 100px 100px;
+			}
+
+			@include mq("medium") {
+				background: none;
+				padding: 20px 0 20px 20px;
+				color: $link-internal;
+			}
+		}
+	}
+
+	div.description {
+		margin-top: -25px;
+
+		@include mq("max") {
+			margin-top: 0;
+			padding-top: 0,4em;
+		}
+
+		@include mq("medium") {
+			padding-left: 20px;
+		}
+
+		a.link-over {
+			color: $link-internal;
+		}
+	}
+}
+
+#content {
+	padding: 0 120px 0 40px;
+	border-left: 1px dashed #999;
+	margin-left: $side-margin;
+	font-weight: 300;
+	letter-spacing: 0.07em;
+	line-height: 1.4em;
+
+	@include mq("medium") {
+		padding: 0 20px 0 0px;
+		margin-left: 20px;
+		border-left: none;
+	}
+
+	@include mq("small") {
+		padding: 0 20px 0 0;
+	}
+
+	.wp-caption {
+
+		width: 100% !important;
+		height: auto !important;
+		overflow: hidden;
+	}
+
+	.post, .page {
+		position: relative;
+		margin-bottom: 3em;
+
+		p.post-home-lees-verder {
+			a {
+				color: $link-internal;
+			}
+		}
+
+		img {
+			border: 2px solid #fff;
+			@include shadow(1px,1px,2px,rgba(0,0,0,0.7));
+
+			width: 100%;
+			max-width: 620px;
+			height: auto;
+
+		}
+
+		img.space-ab {
+			margin: 2em 0;
+		}
+
+		.the_date {
+			position: absolute;
+			left: ($side-margin+20)*-1;
+			top: 1px;
+			font-size: $small-font-size !important;
+			font-style: italic;
+
+			a {
+				color: #999;
+				text-decoration: none;
+			}
+
+			@include mq("medium") {
+				display: none;
+			}
+		}
+
+		.permalink {
+			position: absolute;
+			left: -98px;
+			top: 0;
+
+			@include mq("medium") {
+				display: none;
+			}
+
+			a {
+				color: #999;
+			}
+		}
+
+		h2 {
+			margin: 0 0 0.5em 0;
+		}
+
+		.via a {
+			color: $link-external;
+		}
+	}
+
+	.post.rl-post-entry, .page.rl-post-entry {
+		h2, h1 {
+			font-size: 1.5em;
+			line-height: 1.1em;
+
+			a {
+				color: $link-internal;
+				text-decoration: none;
+			}
+		}
+
+		p.post-quote {
+			font-style: italic;
+			font-weight: normal;
+		}
+
+		.the_date {
+			font-size: $small-font-size !important;
+		}
+
+		.the_date_single {
+			font-size: 1em;
+			font-style: italic;
+			color: #777;
+		}
+	}
+
+	.post.rl-linked-entry {
+		h2, h1 {
+			font-size: 1em;
+			font-weight: bold;
+			font-style: italic;
+
+			a {
+				color: $link-external;
+			}
+		}
+
+		.the_date_single {
+			font-size: $small-font-size !important;
+			font-style: italic;
+		}
+	}
+}
+
+.single-post, .page {
+
+	#content {
+		padding: 40px 120px 0 0px;
+		border-left: none;
+
+		@include mq("medium") {
+			padding: 20px 20px 0 0;
+		}
+
+		@include mq("small") {
+			padding: 20px 20px 0 0;
+		}
+	}
+
+	.post {
+
+		position: relative;
+
+		h1 {
+			margin-bottom: 0.5em;
+		}
+
+		.fb-like {
+			margin-top: 2em;
+			padding-top: 2em;
+			border-top: 1px dashed #999;
+		}
+	}
+}
+
+p#go-to-index {
+	position: absolute;
+	left: -90px;
+	top: 0px;
+
+	a {
+		font-size: 2em;
+		color: #666;
+		text-decoration: none;
+		display: block;
+		padding: 12px 10px;
+		background-color: #e9e9e9;
+
+		&:hover {
+			color: #fff;
+			background-color: $link-internal;
+		}
+	}
+
+	@include mq("medium") {
+		display: none;
+	}
+}
+
+div.navigation {
+	height: 24px;
+	position: relative;
+
+	.next-posts {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.prev-posts {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	a {
+		color: $link-internal;
+	}
+}
+
+#footer {
+	margin-top: 3em;
+	border-top: 1px solid #dedede;
+	padding: 3em 0 3em $side-margin;
+	font-size: 0.8em;
+
+	.footer-body {
+		margin-bottom: 2em;
+	}
+
+	a.go-me, a.go-home {
+		color: $link-internal;
+	}
+
+	@include mq("medium") {
+		padding: 3em 1em;
+	}
+}
