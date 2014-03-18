@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> xmlns:og="http://opengraphprotocol.org/schema/"
-      xmlns:fb="http://www.facebook.com/2008/fbml">
-
+<html>
 <head>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<meta charset="<?php bloginfo('charset'); ?>">
@@ -63,15 +61,13 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
 
 	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/sinds2012.css">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/_/styles/sinds2012.css">
 
 	<?php wp_head(); ?>
 
 </head>
 
 <body <?php body_class(); ?>>
-
-
 
 	<div id="page-wrap">
 
