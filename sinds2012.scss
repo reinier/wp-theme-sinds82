@@ -6,6 +6,8 @@
 	box-shadow:  $off-y $off-x $blur $color;
 }
 
+/* TODO - convert css to mobile first */
+
 @mixin mq($size) {
 	@if $size == "max" {
 		@media screen and (min-width: 1280px) {
@@ -153,15 +155,20 @@ p.wp-caption-text {
 	}
 
 	div.description {
-		margin-top: -25px;
-
-		@include mq("max") {
-			margin-top: 0;
-			padding-top: 0,4em;
-		}
+		padding: 1em;
+		border-bottom: 2px solid rgba(0,0,0,0.1);
+		border-top: 2px solid rgba(0,0,0,0.1);
+		background-color: #ffb;
 
 		@include mq("medium") {
 			padding-left: 20px;
+			border: 2px solid rgba(0,0,0,0.1);
+		}
+
+		@include mq("max") {
+			border: 2px solid rgba(0,0,0,0.1);
+			margin-top: 1em;
+			padding-top: 0,4em;
 		}
 
 		a.link-over {
