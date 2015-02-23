@@ -96,22 +96,23 @@ p.wp-caption-text {
           background: none;
           padding: 20px 0 20px 20px;
           color: #b40000; } }
-  #header div.description {
-    padding: 1em;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    border-top: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: #ffb; }
-    @media screen and (max-width: 960px) {
-      #header div.description {
-        padding-left: 20px;
-        border: 2px solid rgba(0, 0, 0, 0.1); } }
-    @media screen and (min-width: 1280px) {
-      #header div.description {
-        border: 2px solid rgba(0, 0, 0, 0.1);
-        margin-top: 1em;
-        padding-top: 0,4em; } }
-    #header div.description a.link-over {
-      color: #b40000; }
+
+div.description {
+  padding: 1em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffb; }
+  @media screen and (max-width: 960px) {
+    div.description {
+      padding-left: 20px;
+      border: 2px solid rgba(0, 0, 0, 0.1); } }
+  @media screen and (min-width: 1280px) {
+    div.description {
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      margin-top: 1em;
+      padding-top: 0,4em; } }
+  div.description a.link-over {
+    color: #b40000; }
 
 #content {
   padding: 0 120px 0 40px;
@@ -259,5 +260,10 @@ div.navigation {
   @media screen and (max-width: 960px) {
     #footer {
       padding: 3em 1em; } }
+
+.twitter-follow-button {
+  width: 300px;
+  height: 20px;
+  margin-top: 1em; }
 
 /*# sourceMappingURL=sinds2012.css.map */

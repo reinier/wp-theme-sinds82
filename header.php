@@ -69,7 +69,3 @@
 
 <body <?php body_class(); ?>>
 	<div id="page-wrap">
-		<div id="header">
-			<h1 id="logo"><a href="<?php echo get_option('home'); ?>/"><span><?php bloginfo('name'); ?></span></a></h1>
-			<div class="description">Openbare hersenspinsels van <a rel="me" href="/over-sinds82-en-reinier-ladan" class="link-over"> interaction designer en tech thinker Reinier Ladan</a>.</div>
-		</div>
