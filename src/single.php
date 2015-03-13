@@ -38,7 +38,7 @@
 	<?php endwhile; endif; ?>
 	<div class="description">
 		<a href="/">Sinds '82</a> is het weblog van <a rel="me" href="/over-sinds82-en-reinier-ladan" class="link-over"> interaction designer en tech thinker Reinier Ladan</a>.<br />
-		<?php include (TEMPLATEPATH . '/_/inc/follow-button.php' ); ?>
+		<?php include (TEMPLATEPATH . '/_follow-button.php' ); ?>
 	</div>
 </div>
 

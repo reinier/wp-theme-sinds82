@@ -58,10 +58,10 @@
 	<meta name="DC.subject" content="Weblog over design, techniek en alles daar tussenin">
 	<meta name="DC.creator" content="Reinier Ladan">
 
-	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/_/img/favicon.ico">
+	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico">
 
-	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/_/img/apple-touch-icon.png">
-	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/_/styles/sinds2012.css">
+	<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/styles/sinds2012.css">
 
 	<?php wp_head(); ?>
 

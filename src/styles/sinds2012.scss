@@ -1,4 +1,4 @@
-@import "http://fonts.googleapis.com/css?family=Gentium+Basic:700";
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:700);
 
 @mixin shadow( $off-y, $off-x, $blur, $color){
 	-moz-box-shadow: $off-y $off-x $blur $color;
@@ -33,7 +33,7 @@ $break-medium: 960px;
 $break-small: 480px;
 
 body {
-	background: #fff url("../img/bg-sinds82.png") repeat-x left top;
+	background: #fff url("../images/bg-sinds82.png") repeat-x left top;
 	margin: 0;
 	padding: 0;
 	font-family: "Helvetica Neue", Helvetica, Arial;
@@ -99,7 +99,7 @@ p.wp-caption-text {
 	}
 
 	@media screen and (-webkit-min-device-pixel-ratio: 2) {
-		background: url("../img/bg-sinds82.png") repeat-x left top;
+		background: url("../images/bg-sinds82.png") repeat-x left top;
 		background-color: #fff;
 		background-size: 1px 20px;
 		font-size: 1.2em;
@@ -138,11 +138,11 @@ p.wp-caption-text {
 			text-decoration: none;
 			font-size: 1.6em;
 			display: block;
-			background: url("../img/logo.png") no-repeat left top;
+			background: url("../images/logo.png") no-repeat left top;
 			padding: 20px 0 20px 120px;
 
 			@media screen and (-webkit-min-device-pixel-ratio: 2){
-				background: url("../img/logo_2x.png") no-repeat 0px 21px;
+				background: url("../images/logo_2x.png") no-repeat 0px 21px;
 				background-size: 100px 100px;
 			}
 
